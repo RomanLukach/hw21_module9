@@ -18,7 +18,6 @@
     "cy:negative_electron24:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --config-file cypress24.config.js --record --key 3e77e962-ba14-4fa6-b84d-5db3883909e8",
     "cy:negative_chrome13:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --config-file cypress13.config.js --record --key 3e77e962-ba14-4fa6-b84d-5db3883909e8",
     
-    "cy:parallel:pe24_nc13:cloud": "npm run cy:positive_electron24:cloud -- --group pe24 --ci-build-id 01 --parallel & npm run cy:negative_chrome13:cloud -- --group nc13 --ci-build-id 1 --parallel",
     "cy:parallel:pc13_ne24:cloud": "npm run cy:positive_chrome13:cloud -- --group pc13 --ci-build-id 01 --parallel & npm run cy:negative_electron24:cloud -- --group ne24 --ci-build-id 1 --parallel"
   },
   "repository": {
