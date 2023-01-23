@@ -1,0 +1,56 @@
+PS D:\Roman\Documents\ITSwitcher\AutoQA\Home_works\hw21-22-M9> npm run cy:parallel:pe24_nc13:cloud
+
+> hw21-22-m9@1.0.0 cy:parallel:pe24_nc13:cloud
+> npm run cy:positive_electron24:cloud -- --group pe24 --ci-build-id 01 --parallel & npm run cy:negative_chrome13:cloud -- --group nc13 --ci-build-id 1 --parallel
+
+
+> hw21-22-m9@1.0.0 cy:positive_electron24:cloud
+> cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --config-file cypress24.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042 --group pe24 --ci-build-id 01 --parallel
+
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        12.3.0                                                                         │
+  │ Browser:        Electron 106 (headless)                                                        │
+  │ Node Version:   v18.13.0 (C:\Program Files\NodeJS\node.exe)                                    │
+  │ Specs:          2 found (AS-30_AS-32.cy.js, AS-6_AS-27_AS-28_AS-29.cy.js)                      │
+  │ Searched:       D:\Roman\Documents\ITSwitcher\AutoQA\Home_works\hw21-22-M9\cypress\e2e\positiv │
+  │                 e\*.*                                                                          │
+  │ Params:         Tag: false, Group: pe24, Parallel: true                                        │
+  │ Run URL:        https://cloud.cypress.io/projects/junumb/runs/9                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+> hw21-22-m9@1.0.0 cy:negative_chrome13:cloud
+> cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --config-file cypress13.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042 --group nc13 --ci-build-id 1 --parallel
+
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        12.3.0                                                                         │
+  │ Browser:        Chrome 109 (headless)                                                          │
+  │ Node Version:   v18.13.0 (C:\Program Files\NodeJS\node.exe)                                    │
+  │ Specs:          2 found (AS-12_AS-15_AS16.cy.js, AS-9_AS-11.cy.js)                             │
+  │ Searched:       D:\Roman\Documents\ITSwitcher\AutoQA\Home_works\hw21-22-M9\cypress\e2e\negativ │
+  │                 e\*.*                                                                          │
+  │ Params:         Tag: false, Group: nc13, Parallel: true                                        │
+  │ Run URL:        https://cloud.cypress.io/projects/junumb/runs/10                               │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+PS D:\Roman\Documents\ITSwitcher\AutoQA\Home_works\hw21-22-M9> 
