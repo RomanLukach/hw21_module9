@@ -1,0 +1,29 @@
+{
+  "name": "hw21-22-m9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:run": "cypress run",
+    "cy:run:cloud": "cypress run --record --key 84f52d62-c426-4f51-ba65-07b85babe8a9",
+
+    "cy:positive": "cypress run --spec 'cypress/e2e/santaAPI_positive_6.cy.js' --record --key 84f52d62-c426-4f51-ba65-07b85babe8a9",
+    "cy:negative": "cypress run --spec 'cypress/e2e/santaAPI_negative_13.cy.js' --record --key 84f52d62-c426-4f51-ba65-07b85babe8a9",
+    "cy:parallel": "npm run cy:positive -- --group Positive --ci-build-id 1 --parallel & npm run cy:negative -- --group Negative --ci-build-id 1 --parallel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanLukach/hw21-22-M9.git"
+  },
+  "author": "Roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomanLukach/hw21-22-M9/issues"
+  },
+  "homepage": "https://github.com/RomanLukach/hw21-22-M9#readme",
+  "devDependencies": {
+    "@bahmutov/cy-api": "^2.2.3",
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.3.0"
+  }
+}
