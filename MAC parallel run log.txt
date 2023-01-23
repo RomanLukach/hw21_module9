@@ -1,0 +1,52 @@
+roman@Romans-MBP hw21-22-M9 % npm run cy:parallel:pc13_ne24:cloud
+
+> hw21-22-m9@1.0.0 cy:parallel:pc13_ne24:cloud
+> npm run cy:positive_chrome13:cloud -- --group pc13 --ci-build-id 01 --parallel & npm run cy:negative_electron24:cloud -- --group ne24 --ci-build-id 1 --parallel
+
+
+> hw21-22-m9@1.0.0 cy:positive_chrome13:cloud
+> cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --config-file cypress13.config.js --record --key 3e77e962-ba14-4fa6-b84d-5db3883909e8 --group pc13 --ci-build-id 01 --parallel
+
+
+> hw21-22-m9@1.0.0 cy:negative_electron24:cloud
+> cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --config-file cypress24.config.js --record --key 3e77e962-ba14-4fa6-b84d-5db3883909e8 --group ne24 --ci-build-id 1 --parallel
+
+
+
+====================================================================================================
+====================================================================================================
+
+
+  (Run Starting)
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        12.3.0                                                                         │
+  │ Browser:        Chrome 109 (headless)                                                          │
+  │ Node Version:   v18.12.1 (/usr/local/bin/node)                                                 │
+  │ Specs:          2 found (AS-30_AS-32.cy.js, AS-6_AS-27_AS-28_AS-29.cy.js)                      │
+  │ Searched:       cypress/e2e/positive/*.*                                                       │
+  │ Params:         Tag: false, Group: pc13, Parallel: true                                        │
+  │ Run URL:        https://cloud.cypress.io/projects/8ugef5/runs/2                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        12.3.0                                                                         │
+  │ Browser:        Electron 106 (headless)                                                        │
+  │ Node Version:   v18.12.1 (/usr/local/bin/node)                                                 │
+  │ Specs:          2 found (AS-12_AS-15_AS16.cy.js, AS-9_AS-11.cy.js)                             │
+  │ Searched:       cypress/e2e/negative/*.*                                                       │
+  │ Params:         Tag: false, Group: ne24, Parallel: true                                        │
+  │ Run URL:        https://cloud.cypress.io/projects/8ugef5/runs/1                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+====================================================================================================
+
+
+====================================================================================================
+
+  (Run Finished)
+  (Run Finished)
+roman@Romans-MBP hw21-22-M9 %
