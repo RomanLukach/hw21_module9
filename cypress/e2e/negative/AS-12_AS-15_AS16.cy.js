@@ -1,13 +1,11 @@
 import { faker } from "@faker-js/faker"
 import '@bahmutov/cy-api'
 const users = require("../../fixtures/users.json");
-const box = require("../../fixtures/boxData.json")
-const boxName = faker.name.jobArea();
+
 
 // Negative
 describe('AS-12 Login (no login & correct password)', () => {
 
-  const users = require("../fixtures/users.json");
   // let wrongpassword = faker.word.adjective( { lenght: {min: 8, min: 20}} )
 
   it('no login & correct password', () => {
@@ -29,7 +27,6 @@ describe('AS-12 Login (no login & correct password)', () => {
 
 describe('AS-15 Login (no login & no password)', () => {
 
-  const users = require("../fixtures/users.json");
   // let wrongpassword = faker.word.adjective( { lenght: {min: 8, min: 20}} )
 
   it('no login & no password', () => {
@@ -52,7 +49,6 @@ describe('AS-15 Login (no login & no password)', () => {
 
 describe('AS-16 Login (incorrect login & correct password)', () => {
 
-  const users = require("../fixtures/users.json");
   // let wrongpassword = faker.word.adjective( { lenght: {min: 8, min: 20}} )
 
 it('incorrect login & correct password', () => {

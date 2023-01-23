@@ -5,11 +5,37 @@
   "main": "index.js",
   "scripts": {
     "cy:run": "cypress run",
-    "cy:run:cloud": "cypress run --record --key 84f52d62-c426-4f51-ba65-07b85babe8a9",
+    "cy:cloud": "cypress run --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:positive:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:negative:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:positive_electron:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:positive_chrome:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:negative_electron:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:negative_chrome:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    
+    "cy:positive_electron_24:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser electron --config-file cypress-24.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:positive_chrome_13:cloud": "cypress run --spec 'cypress/e2e/positive/*.*' --browser chrome --config-file cypress-13.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:negative_electron_24:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser electron --config-file cypress-24.config.js--record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    "cy:negative_chrome_13:cloud": "cypress run --spec 'cypress/e2e/negative/*.*' --browser chrome --config-file cypress-13.config.js --record --key ebb8d895-c693-4a98-888b-420f07abc042",
+    
 
-    "cy:positive": "cypress run --spec 'cypress/e2e/santaAPI_positive_6.cy.js' --record --key 84f52d62-c426-4f51-ba65-07b85babe8a9",
-    "cy:negative": "cypress run --spec 'cypress/e2e/santaAPI_negative_13.cy.js' --record --key 84f52d62-c426-4f51-ba65-07b85babe8a9",
-    "cy:parallel": "npm run cy:positive -- --group Positive --ci-build-id 1 --parallel & npm run cy:negative -- --group Negative --ci-build-id 1 --parallel"
+
+
+
+
+
+    "cy:parallel:cloud": "npm run cy:positive:cloud -- --group positive --ci-build-id 1 --parallel & npm run cy:negative -- --group negative --ci-build-id 1 --parallel",
+
+  
+    "cy:run:electron": "npx cypress run --browser electron",
+    "cy:run:chrome": "npx cypress run --browser chrome",
+    "cy:run:chrome_electron": "npm run cy:run:chrome && npm run cy:run:electron",
+    "cy:dashboard": "npm run cy:run:chrome_electron --record --key 5b59fc5d-344c-48dc-8d27-dca5ca91ddfe",
+    "cy:open:prod": "npx cypress open --config-file cypress-prod-env.config.js",
+    "cy:open:qa": "npx cypress open --config-file cypress-qa-env.config.js",
+    "cy:run:prod": "npx cypress run --config-file cypress-prod-env.config.js",
+    "cy:run:qa": "npx cypress run --config-file cypress-qa-env.config.js"
+  
   },
   "repository": {
     "type": "git",

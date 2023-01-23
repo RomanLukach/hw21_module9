@@ -6,8 +6,6 @@ const boxName = faker.name.jobArea();
 
 // Negative
 describe('AS-9 Login (correct login & no password)', () => {
-
-  const users = require("../fixtures/users.json");
   // let wrongpassword = faker.word.adjective( { lenght: {min: 8, min: 20}} )
 
   it('no login & correct password', () => {
@@ -28,8 +26,6 @@ describe('AS-9 Login (correct login & no password)', () => {
 })
 
 describe('AS-11 Login (correct login & incorrect password)', () => {
-
-  const users = require("../fixtures/users.json");
   // let wrongpassword = faker.word.adjective( { lenght: {min: 8, min: 20}} )
 
   it('no login & correct password', () => {
